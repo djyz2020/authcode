@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>验证码生成</title>
+</head>
+<body>
+<div style="text-align: center;margin-top: 200px;">
+    <div><img alt="如果看不清楚，请单击图片刷新！" id="code" src="img/captcha.jpg"></div>
+    <div style="margin-top: 10px;"><a href="javascript:void(0);" onclick="refreshCode()">点击刷新</a></div>
+</div>
+</body>
+
+<script style="text/javascript">
+    function refreshCode() {
+        // console.log("二维码生成中...");
+        document.getElementById("code").src = "/captcha.jpg?t=" + new Date().getMilliseconds();
+    }
+</script>
+</html>
